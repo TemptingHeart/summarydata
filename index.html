@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Json Summary by TemptingHeart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Json Summary</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/TemptingHeart/summarydata" class="btn">View on GitHub</a>
+      <a href="https://github.com/TemptingHeart/summarydata/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/TemptingHeart/summarydata/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="what-is-json" class="anchor" href="#what-is-json" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What Is JSON?</h1>
+
+<ol>
+<li> JSON is a data interchange format</li>
+<li> JSON is programming language independent (JavaScript is not required to use it)</li>
+<li> JSON is based on the object literal notation of JavaScript (emphasis on the word
+“notation”)</li>
+<li>JSON represents data in a way that is friendly to universal programming con‐cepts</li>
+</ol>
+
+<h1>
+<a id="json-syntax" class="anchor" href="#json-syntax" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>JSON Syntax</h1>
+
+<ol>
+<li>a simple exmaple
+<code>
+{
+"brand": "Crocs",
+"color": "pink",
+"size": 9,
+"hasLaces": false
+}
+</code>
+</li>
+<li>JSON uses the colon character (:) to separate the names and values.The name is always on the left and the value is always on the right. </li>
+<li>JSON is based on JavaScript object literals, so it looks much the same. A JavaScript object literal does not need quotes around the name of the name-value pair. In JSON, it is absolutely required. In JavaScript, an object may have single quotes for syntax instead of double quotes.In JSON, only double quotes are used, and they are absolutely required around the name of the name-value pair.</li>
+<li>The MIME type for JSON is application/json.</li>
+<li>JSON files use the .json extension.</li>
+</ol>
+
+<h1>
+<a id="json-data-types" class="anchor" href="#json-data-types" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>JSON Data Types</h1>
+
+<ol>
+<li> The JSON data types are:
+
+<ul>
+<li>Object</li>
+<li>String</li>
+<li>Number </li>
+<li>Boolean </li>
+<li>Null</li>
+<li>Array</li>
+</ul>
+</li>
+<li>
+<p>The JSON String Data Type</p>
+
+<ul>
+<li>
+<p>example: </p>
+
+<pre><code>{ "animal" : "cat" }
+</code></pre>
+</li>
+<li>
+<p>A string value must always be surrounded in double quotes.</p>
+
+<pre><code>This is not valid JSON
+{
+'title': 'This is my title.',
+'body': 'This is the body.'
+}
+</code></pre>
+</li>
+<li>
+<p>This code won’t work</p>
+
+<pre><code>{
+"promo": "Say "Bob's the best!" at checkout for free 8oz bag of kibble."
+}
+</code></pre>
+
+<p>Using a backslash character to escape quotes inside of strings fixes the problem</p>
+
+<pre><code>{
+ "promo": "Say \"Bob's the best!\" at checkout for free 8oz bag of kibble."
+}
+</code></pre>
+
+<p>In addition to the double quote and backslash characters, you must escape the follow‐ ing characters:</p>
+
+<ul>
+<li>\/ (forward slash) </li>
+<li>\b (backspace)</li>
+<li>\f (form feed)</li>
+<li>\t (tab)</li>
+<li>\n (new line)</li>
+<li>\r (carriage return)</li>
+<li>\u followed by hexadecimal characters (e.g., the smiley emoticon \u263A) </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>The JSON Number Data Type</p>
+
+<ul>
+<li>
+<p>example: </p>
+
+<pre><code>{
+  "widgetInventory": 289,
+  "sadSavingsAccount": 22.59,
+  "seattleLatitude": 47.606209,
+  "seattleLongitude": -122.332071,
+  "earthsMass": 5.97219e+24
+}
+</code></pre>
+</li>
+<li><p>A number in JSON can be an integer, decimal, negative number, or an exponent.</p></li>
+</ul>
+</li>
+<li>
+<p>The JSON Boolean Data Type</p>
+
+<ul>
+<li>
+<p>example: </p>
+
+<pre><code>{
+"toastWithBreakfast": false,
+"breadWithLunch": true
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>The JSON Null Data Type</p>
+
+<ul>
+<li>In JSON, null must always be all lowercase characters.</li>
+</ul>
+</li>
+<li>
+<p>The JSON Array Data Type</p>
+
+<ul>
+<li>
+<p>example: </p>
+
+<pre><code>{
+  "eggCarton": [
+  "egg",
+  null,
+  "egg",
+  "egg",
+  "egg",
+  "egg",
+  "egg",
+  "egg",
+  "egg",
+  "egg",
+  5,
+  "egg"
+  ] }
+</code></pre>
+</li>
+<li>The array is always surrounded in square brackets ([]).</li>
+<li>In JSON, the mixing and matching of data types is valid. </li>
+</ul>
+</li>
+<li>
+<p>The JSON Object Data Type</p>
+
+<ul>
+<li>The Object is always surrounded in square brackets ({}).</li>
+<li>A JavaScript object can carry functions within, while a JSON object cannot carry any functions. </li>
+</ul>
+</li>
+</ol>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/TemptingHeart/summarydata">Json Summary</a> is maintained by <a href="https://github.com/TemptingHeart">TemptingHeart</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
